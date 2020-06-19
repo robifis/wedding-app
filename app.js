@@ -14,9 +14,13 @@ app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
 // Connect to MongoDB
-mongoose.connect(keys.mongodb.mongoURI, () => {
-    console.log("Connected to MongoDB");
-});
+mongoose.connect(
+    keys.mongodb.mongoURI,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    () => {
+        console.log("Connected to MongoDB");
+    }
+);
 
 app.get("/", function (req, res) {
     res.render("home");

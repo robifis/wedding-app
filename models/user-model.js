@@ -5,7 +5,10 @@ const Schema = mongoose.Schema;
 // Creating our UserSchema
 const userSchema = new Schema({
     username: String,
-    googleId: String
+    googleId: String,
+    email: String,
+    fname: String,
+    lname: String
 });
 
 // Creating the model for mongoose!

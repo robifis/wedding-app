@@ -4,5 +4,30 @@
     <p>Please use one of the following methods to register with us.</p>
     <a class="btn btn-lg text-light" href="#" style="background:#3b5998">Facebook</a>
     <a class="btn btn-lg text-light" href="#" style="background:#DB4437">Google</a>
+
+    <div class="mt-4">
+        <h2>Please Register below!</h2>
+    <form action="/auth/register/newUser" method="POST">
+        <div class ="row mb-3">
+          <div class="col">
+              <label for="fname">First Name</label>
+              <input placeholder="First Name" type="fname" class="form-control" name="fname" id="fname" >
+          </div>
+          <div class="col">
+              <label for="lname">Last Name</label>
+              <input placeholder="Last Name"type="lname" class="form-control" id="lname" name='lname' >
+          </div>
+        </div>
+          <div class="form-group">
+              <label for="email">Email address</label>
+              <input placeholder="Email address" type="email" class="form-control" id="email" name="email">
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input placeholder="Password" type="password" class="form-control" id="password" name="password">
+          </div>
+          <button type="submit" class="btn" style="color:white; background:#DB4437">Register</button>
+    </form>
+    </div>
   </div>
 </div>

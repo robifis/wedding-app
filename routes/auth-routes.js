@@ -16,7 +16,7 @@ router.get(
     "/login/google",
     passport.authenticate("google", {
         // Specifying the information we want from Google
-        scope: ["profile"]
+        scope: ["profile", "email"]
     })
 );
 
@@ -26,10 +26,10 @@ router.get(
     // The code below is needed to send the code back (from the URL) to google to retrieve the info
     // After the passport.authenticate function fires, the callback function fires that's inside
     // of the passport-setup.js file!
-    passport.authenticate("google"),
+    passport.authenticate("google", { failureRedirect: "/login" }),
     (req, res) => {
         // Temp measure!
-        res.send("You have successfully logged in!");
+        res.redirect("/");
     }
 );
 

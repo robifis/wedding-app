@@ -15,8 +15,13 @@
     </ul>
   </div>
       <form class="form-inline my-2 my-lg-0">
+      {{#if user}}
+      <a href="/auth/logout" class="btn my-2 my-sm-0 mr-3" style="border-color:#fa4d28; color:#fa4d28">Logout</a>
+      <a href="/profile/user" class="btn my-2 my-sm-0 mr-3 text-white" style="background-color:#fa4d28">Profile</a>
+      {{else}}
       <a href="/auth/login" class="btn my-2 my-sm-0 mr-3" style="border-color:#fa4d28; color:#fa4d28">Login</a>
       <a href="/auth/register" class="btn my-2 my-sm-0 text-white"style="background-color:#fa4d28">Register</a>
+      {{/if}}
     </form>
   </div>
 </nav>

@@ -8,7 +8,8 @@ const userSchema = new Schema({
     googleId: String,
     email: String,
     fname: String,
-    lname: String
+    lname: String,
+    thumbnail: String
 });
 
 // Creating the model for mongoose!
